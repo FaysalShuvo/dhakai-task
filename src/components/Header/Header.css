@@ -1,9 +1,15 @@
+.header {
+  width: 100%;
+}
+
 .nav-bar {
   background: #018d6c;
   padding: 8px;
 }
 .has-search .form-control {
   padding-left: 2.375rem;
+  border-radius: 2.5rem;
+  width: 300px;
 }
 
 .has-search .form-control-feedback {
@@ -16,4 +22,28 @@
   text-align: center;
   pointer-events: none;
   color: #aaa;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #004737;
+  margin-left: 10px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.explore-act {
+  background-color: #00785e;
+  padding: 2px !important;
+  font-weight: 600;
+  color: #fff;
+}
+.explore {
+  background-color: #009775;
 }
