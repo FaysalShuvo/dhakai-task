@@ -11,7 +11,7 @@ function App() {
   const { user } = useAuthContext();
   return (
     <div>
-      {/* {authIsReady && ( */}
+     
       <BrowserRouter>
         <div className="d-flex">
           <Sidebar />
@@ -30,7 +30,7 @@ function App() {
           </div>
         </div>
       </BrowserRouter>
-      {/* )} */}
+     
     </div>
   );
 }
