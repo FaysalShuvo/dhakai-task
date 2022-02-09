@@ -3,7 +3,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import DashboardCard from "../DashboardCard/DashboardCard";
-import "./Dashboard.css";
 
 const Dashboard = () => {
   const [data, setData] = useState([]);
@@ -16,12 +15,15 @@ const Dashboard = () => {
   useEffect(() => {
     axios
       .get(api, { headers: { Authorization: `Bearer ${token}` } })
-      .then((res) => setData(res.data.result.manufacturers))
+      .then((res) => {
+        console.log(res.data);
+        setData(res.data.result.manufacturers);
+      })
       .catch((err) => setError(err));
   }, [token]);
 
   return (
-    <div className="row p-2">
+    <div className="dashboard row p-4">
       {data && <DashboardCard lists={data} />}
       {error && <p className="error">{error}</p>}
     </div>
